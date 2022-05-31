@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulMate | Home</title>
+    <link rel="shortcut icon" href="./public/assets/SoulMate-_4_.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style-landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+      #gif {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100vw;
+        min-height: 100vw;
+        opacity: .5;
+      }
+    </style>
+   </head>
+<body onscroll="changeNav();">
+ <img id="gif" src="./public/assets/43295-heart-fly-transparent-bg.gif" alt="" >
+
+  <nav id="home">
+    <div class="menu">
+      <div class="logo">
+        <a href="javascript:void(0)" onclick="window.scrollTo(0, 0);"><img id="soulmate-logo" src="./public/assets/SoulMate (3).png" alt="" height="62"></a>
+      </div>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="window.scrollTo(0, 0);">Home</a></li>
+        <li><a href="javascript:void(0)" onclick="window.scrollTo(0,document.body.scrollHeight);">Features</a></li>
+        <li><a href="login-user.php">Login</a></li>
+        <li><a href="signup-user.php">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">Your <span id="head" >SoulMate</span></div>
+    <div class="sub_title">Is Waiting!</div>
+    <div class="btns">
+      <button onclick="changeAddr('login-user.php');">Login</button>
+      <button onclick="changeAddr('signup-user.php');">Register</button>
+    </div>
+  </div>
+  
+<section class="features" id="features">
+
+  <h1 class="features-head" style="color: rgb(255, 0, 76);">Features</h1>
+
+  <div class="wrapper">
+    <div class="box">
+       <div class="front-face">
+          <div class="icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <span>Chat</span>
+       </div>
+       <div class="back-face">
+          <span>Chat</span>
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
+          </p>
+       </div>
+    </div>
+    <div class="box">
+       <div class="front-face">
+          <div class="icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <span>Location Based Matches</span>
+       </div>
+       <div class="back-face">
+          <span>Location Based Matches</span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quia.
+          </p>
+       </div>
+    </div>
+    <div class="box">
+       <div class="front-face">
+          <div class="icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <span>Privacy</span>
+       </div>
+       <div class="back-face">
+          <span>Privacy</span>
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis aliquid porro perspiciatis dolores impedit ad.
+          </p>
+       </div>
+    </div>
+ </div>
+</section>
+
+<footer class="footer">
+  <div class="icons">
+     <a href="#"><i class="fab fa-facebook footer-icon"></i></a>
+     <a href="#"><i class="fab fa-linkedin footer-icon"></i></a>
+     <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+     <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+  </div>
+   <p class="company-name">SoulMate &copy; 2021, ALL Rights Reserved®</p>
+</footer>
+
+  
+<script src="./js/landing.js"></script>
+</body>
+
+</html>
