@@ -88,7 +88,7 @@ if($email != false && $password != false){
                     ?>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input class="form-control" id="email" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>" onkeyup="validateEmail(this.value);">
+                        <input class="form-control" id="email" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>" onkeyup="validateEmail(this.value);" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>

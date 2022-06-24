@@ -62,9 +62,10 @@ function loadCards(cards) {
 	let output = '';
 
 	cards.forEach((card) => {
+		console.log(card.profile_photo);
 		output += `
   <div class="tinder--card" style="background: linear-gradient(0deg, rgba(0,0,0,0.30885857761073177) 0%, rgba(255,255,255,0) 100%), url(${card.profile_photo}); background-repeat: no-repeat; background-position: center center; background-size: cover;" onmouseover="showBio(this);" onmouseout="hideBio(this);">
-      <div class="card-info" data-uid="${card.uid}" data-uid1="${uid}">
+      <div class="card-info" data-uid="${card.uid}" data-uid1="${uid1}">
         <h4>${card.name.split(' ')[0]}<span class="lead">, ${card.age}</span></h4>
         <p><i class="fas fa-map-marker-alt" style="margin-right: 2px;"></i> ${card.distance}kms away</p>
         <p>${card.bio}</p>
