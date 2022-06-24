@@ -18,6 +18,7 @@ Clone this repo on your desktop and copy the folder in the following directory: 
 
 ### Step 3: 
 Right click on the WAMP Server tray icon and under the tools section, note down the port used by MySQL and Apache server
+
 ![mysql port](https://user-images.githubusercontent.com/106474125/175659026-23919992-123d-45bd-9621-e9a66e379224.jpg)
 ![apache port](https://user-images.githubusercontent.com/106474125/175659033-03b2f865-0efa-4062-8d1f-c6b49b4a69f3.jpg)
 
