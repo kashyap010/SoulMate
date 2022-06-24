@@ -1,6 +1,7 @@
-<img src="public/assets/SoulMate (3).png" alt="logo" width="400" />
+<img src="public/assets/SoulMate (3).png" alt="logo" width="300" />
 
 # Why search for a date when you can find your SoulMate?
+
 Signup for free and try your luck. You just might find the girl you've always been waiting for!
 
 <br />
@@ -60,11 +61,11 @@ Open the signup page `http://localhost:your_apache_port_from_step_3/dating-websi
 
 Register a new account and enter OTP 🔢 received on your email id
 
-gif
+account.gif
 
 Fill in your account details 👨‍💻👩‍💻
 
-gif
+account.gif
 
 See your matches. Like ❤ them and wait till they like you back.
 
