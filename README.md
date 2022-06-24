@@ -61,7 +61,7 @@ Open the signup page `http://localhost:your_apache_port_from_step_3/dating-websi
 
 Register a new account and enter OTP 🔢 received on your email id
 
-account.gif
+signup.gif
 
 Fill in your account details 👨‍💻👩‍💻
 
