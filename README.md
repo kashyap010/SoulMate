@@ -64,11 +64,11 @@ Register a new account and enter OTP 🔢 received on your email id
 
 Fill in your account details 👨‍💻👩‍💻
 
-![Signup image](https://s8.gifyu.com/images/account.gif)
+![Account details image](https://s8.gifyu.com/images/account.gif)
 
 See your matches. Like ❤ them and wait till they like you back.
 
-![Homepage image](https://s8.gifyu.com/images/login6d0f32aef79c39f4.gif)
+![Homepage image](https://s8.gifyu.com/images/homepage.gif)
 
 The one you've liked will see your profile first. If she likes you back, you've found your SoulMate❤ 
 
@@ -78,11 +78,11 @@ Congratulations 🎉 It's a match 🎉
 
 See what you share in common and chat 📭 to know each other better.
 
-![Live chat image](https://s8.gifyu.com/images/live-chat.gif)
+![Live chat image](https://s8.gifyu.com/images/chat.gif)
 
 Come back again later to find more potential soulmates 🤗
 
-![Login image](https://s8.gifyu.com/images/logine079d1dc3e9c8c2f.gif)
+![Login image](https://s8.gifyu.com/images/logincfd4bbbaa3e733b7.gif)
 
 
 
