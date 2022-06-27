@@ -17,6 +17,12 @@
             $prof_pic = $row1['profile_photo'];
         }
 
+        $sql2 = "SELECT profile_photo from usertable, userprofile where usertable.uid=userprofile.uid and usertable.unique_id = {$outgoing_id}";
+        $query1 = mysqli_query($con, $sql2);
+        while($row1 = mysqli_fetch_assoc($query1)){
+            $prof_pic2 = $row1['profile_photo'];
+        }
+        
         if(mysqli_num_rows($query) > 0){
             while($row = mysqli_fetch_assoc($query)){
                 if($row['outgoing_msg_id'] === $outgoing_id){
@@ -27,7 +33,7 @@
                                 </div>';
                 }else{
                     $output .= '<div class="chat incoming">
-                                <img src="'.$prof_pic.'" alt="">
+                                <img src="'.$prof_pic2.'" alt="">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
                                 </div>
