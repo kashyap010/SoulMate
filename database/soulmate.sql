@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 24, 2022 at 07:17 PM
+-- Generation Time: Jun 27, 2022 at 12:14 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -61,7 +61,9 @@ INSERT INTO `career` (`uid`, `status`, `job_desc`, `college`, `entre`, `owns_biz
 (19, 'student', 'you', 'your heart', 'no', ''),
 (20, 'working', 'Business', 'Wayne Towers', 'yes', 'Gotham CLub'),
 (21, 'working', 'Spiderman', 'MCU', 'yes', 'Pizza Boii'),
-(23, 'working', 'Heart Surgeon', 'Apollo Hospital', 'no', '');
+(23, 'working', 'Heart Surgeon', 'Apollo Hospital', 'no', ''),
+(28, 'Working', 'Engineer', 'SpaceX', 'yes', 'Tesla Inc'),
+(29, 'working', 'Engineer', 'Amazon', 'yes', 'AWS');
 
 -- --------------------------------------------------------
 
@@ -137,7 +139,9 @@ INSERT INTO `hobbies` (`uid`, `streaming_movies_and_shows`, `anime`, `stand_up_c
 (19, '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '0'),
 (20, '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0'),
 (21, '1', '1', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1'),
-(23, '1', '0', '0', '0', '1', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0');
+(23, '1', '0', '0', '0', '1', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0'),
+(28, '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1'),
+(29, '1', '1', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -157,7 +161,20 @@ CREATE TABLE IF NOT EXISTS `match` (
   KEY `uid1` (`uid1`),
   KEY `uid2` (`uid2`),
   KEY `first_liked_by` (`first_liked_by`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `match`
+--
+
+INSERT INTO `match` (`mid`, `uid1`, `uid2`, `status`, `first_liked_by`, `created_at`) VALUES
+(59, 28, 3, 'match', 28, '2022-06-24 21:29:31'),
+(60, 28, 4, 'blocked', 28, '2022-06-24 21:29:34'),
+(61, 29, 3, 'match', 29, '2022-06-27 11:25:10'),
+(62, 29, 4, 'blocked', 29, '2022-06-27 11:25:12'),
+(63, 29, 6, 'blocked', 29, '2022-06-27 11:25:13'),
+(64, 29, 9, 'pending', 29, '2022-06-27 11:25:14'),
+(65, 29, 10, 'blocked', 29, '2022-06-27 11:34:13');
 
 -- --------------------------------------------------------
 
@@ -174,7 +191,15 @@ CREATE TABLE IF NOT EXISTS `messages` (
   PRIMARY KEY (`msg_id`),
   KEY `incoming_msg_id` (`incoming_msg_id`),
   KEY `outgoing_msg_id` (`outgoing_msg_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES
+(32, 879670352, 886245528, 'Hey Jane!'),
+(33, 886245528, 879670352, 'Oh hello Elon :)');
 
 -- --------------------------------------------------------
 
@@ -192,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
   `seen_by_user` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`nid`),
   KEY `uid` (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `notification`
@@ -222,7 +247,15 @@ INSERT INTO `notification` (`nid`, `uid`, `type`, `content`, `created_at`, `seen
 (63, 21, 'default', 'Welcome to SoulMate!', '2021-12-18 20:21:09', 'yes'),
 (64, 21, 'default', 'Browse through recommendations to find your perfect match!', '2021-12-18 20:21:09', 'yes'),
 (65, 23, 'default', 'Welcome to SoulMate!', '2022-01-06 18:09:24', 'yes'),
-(66, 23, 'default', 'Browse through recommendations to find your perfect match!', '2022-01-06 18:09:24', 'yes');
+(66, 23, 'default', 'Browse through recommendations to find your perfect match!', '2022-01-06 18:09:24', 'yes'),
+(67, 28, 'default', 'Welcome to SoulMate!', '2022-06-24 21:27:26', 'yes'),
+(68, 28, 'default', 'Browse through recommendations to find your perfect match!', '2022-06-24 21:28:02', 'yes'),
+(71, 28, 'match', 'You have matched with Jane!', '2022-06-24 21:44:17', 'no'),
+(72, 3, 'match', 'You have matched with Elon!', '2022-06-24 21:44:17', 'yes'),
+(73, 29, 'default', 'Welcome to SoulMate!', '2022-06-27 11:22:51', 'yes'),
+(74, 29, 'default', 'Browse through recommendations to find your perfect match!', '2022-06-27 11:22:51', 'yes'),
+(75, 29, 'match', 'You have matched with Jane!', '2022-06-27 11:27:03', 'no'),
+(76, 3, 'match', 'You have matched with Jeff!', '2022-06-27 11:27:03', 'no');
 
 -- --------------------------------------------------------
 
@@ -257,7 +290,8 @@ INSERT INTO `social` (`uid`, `ig`, `sc`, `twit`, `fb`) VALUES
 (19, 'shashi', '', '', ''),
 (20, 'hgfhg', '', 'hff', ''),
 (21, '', '', '', ''),
-(23, 'gigolo121', '', 'Gigolo2122', '');
+(23, 'gigolo121', '', 'Gigolo2122', ''),
+(29, 'jeff.bezos', '', 'jeff@bezos', '');
 
 -- --------------------------------------------------------
 
@@ -303,7 +337,9 @@ INSERT INTO `userprofile` (`uid`, `name`, `age`, `gender`, `height`, `weight`, `
 (19, 'Shashikala Kholapurkar', 22, 'F', '', '', '18.5204303', '73.8567437', './public/user-profiles/user-19-female-photo_2021-12-17_11-11-49.jpg', 'I believe in breaking stereotypes'),
 (20, 'Bruce  Wayne', 21, 'M', '', '', '20.0063', '77.006', './public/user-profiles/user-20-chris-bale.jpg', 'I am Bruce Wayne\r\n(secretly Batman)'),
 (21, 'Toby Maguire', 31, 'M', '', '', '15.2655249', '73.9806296', './public/user-profiles/user-21-spiderman-3-2007_4bc992ca-b799-11ea-bb4b-1e210f9e7edf.jpg', 'I was cast as the 1st Spiderman in MCU'),
-(23, 'Gigolo Georgiovani', 30, 'M', '', '', '15.2655525', '73.9804974', './public/user-profiles/user-23-giovani.jpg', 'My life is as interesting as my name...\r\nHmu for intriguing conversations!');
+(23, 'Gigolo Georgiovani', 30, 'M', '', '', '15.2655525', '73.9804974', './public/user-profiles/user-23-giovani.jpg', 'My life is as interesting as my name...\r\nHmu for intriguing conversations!'),
+(28, 'Elon Musk', 50, 'M', ' ', ' ', '15.2756669', '73.8567437', './public/user-profiles/user-28-elon-musk.jpg', 'Smartest Man in the Universe'),
+(29, 'Jeff Bezos', 54, 'M', '', '', '15.2756661', '73.9780988', './public/user-profiles/user-29-jeff-bezos.jpeg', 'I run Amazon.Inc');
 
 -- --------------------------------------------------------
 
@@ -324,7 +360,7 @@ CREATE TABLE IF NOT EXISTS `usertable` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `unique_id` (`unique_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `usertable`
@@ -351,7 +387,9 @@ INSERT INTO `usertable` (`uid`, `email`, `password`, `code`, `status`, `profile_
 (21, 'test@test.com', '$2y$10$8Z5Fo9Qp7YqOXZpIv8Wdk.kxG5u5YVEoEKSjfEz8Fy7mR5BsJZXVK', 0, 'verified', 'yes', 1301443651, 'Active now'),
 (23, 'gigolo@gmail.com', '$2y$10$uQm7bdjIv.ZaoHwKo6sReettReMVelcNJ7Ss.2D4jyff0gmIaBHuK', 0, 'verified', 'yes', 608688142, 'Offline now'),
 (24, '123@gmail.com', '$2y$10$hRqawvsr/igcjWi1QMvKn.nlGHkCCr0s0jR3Bl8/vCZdEWcYl7fka', 0, 'notverified', 'no', 836049828, 'Active now'),
-(25, 'kisabi3008@aikusy.com', '$2y$10$AoeW9x5musnDTGptLqR76OaKnSsiCETH3bSx1wzHFPCByQtDry73q', 0, 'notverified', 'no', 669283848, 'Active now');
+(25, 'kisabi3008@aikusy.com', '$2y$10$AoeW9x5musnDTGptLqR76OaKnSsiCETH3bSx1wzHFPCByQtDry73q', 0, 'notverified', 'no', 669283848, 'Active now'),
+(28, 'yourEmail@gmail.com', '$2y$10$4K8KtpJE/5FE9VWpXIo3auBZgUhuuP.f7zkPxilrkY8sCTlGC0KzW', 0, 'verified', 'yes', 879670352, 'Offline now'),
+(29, 'email@gmail.com', '$2y$10$5w7VTRtNeXNV5P20GxC0PeXFeX5o1w2dM1ZWoCuaUUKRp8W8d.MgS', 0, 'verified', 'yes', 339814117, 'Offline now');
 
 --
 -- Constraints for dumped tables
