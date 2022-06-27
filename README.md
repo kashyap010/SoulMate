@@ -1,6 +1,7 @@
-<img src="public/assets/SoulMate (3).png" alt="logo" width="400" />
+<img src="public/assets/SoulMate (3).png" alt="logo" width="300" />
 
 # Why search for a date when you can find your SoulMate?
+
 Signup for free and try your luck. You just might find the girl you've always been waiting for!
 
 <br />
@@ -18,8 +19,8 @@ Clone this repo on your desktop and copy the folder in the following directory: 
 
 ### Step 3: 
 Right click on the WAMP Server tray icon and under the tools section, note down the port used by MySQL and Apache server
-![mysql port](https://user-images.githubusercontent.com/106474125/175659026-23919992-123d-45bd-9621-e9a66e379224.jpg)
-![apache port](https://user-images.githubusercontent.com/106474125/175659033-03b2f865-0efa-4062-8d1f-c6b49b4a69f3.jpg)
+
+![mysql port](https://user-images.githubusercontent.com/106474125/175659026-23919992-123d-45bd-9621-e9a66e379224.jpg) ![apache port](https://user-images.githubusercontent.com/106474125/175659033-03b2f865-0efa-4062-8d1f-c6b49b4a69f3.jpg)
 
 In my case it is 3306 and 8081
 
@@ -59,27 +60,29 @@ Open the signup page `http://localhost:your_apache_port_from_step_3/dating-websi
 
 Register a new account and enter OTP 🔢 received on your email id
 
-gif
+![Signup image](https://s8.gifyu.com/images/signup.gif)
 
 Fill in your account details 👨‍💻👩‍💻
 
-gif
+![Signup image](https://s8.gifyu.com/images/account.gif)
 
 See your matches. Like ❤ them and wait till they like you back.
 
-home page.gif
+![Homepage image](https://s8.gifyu.com/images/login6d0f32aef79c39f4.gif)
 
-The one you've liked will see your profile first. If she likes you back, you've found your SoulMate❤ See what you share in common and chat 📭 to know each other better.
+The one you've liked will see your profile first. If she likes you back, you've found your SoulMate❤ 
+
+![Match image](https://s8.gifyu.com/images/match.gif)
 
 Congratulations 🎉 It's a match 🎉
 
-match.gif
+See what you share in common and chat 📭 to know each other better.
 
-live chat.gif
+![Live chat image](https://s8.gifyu.com/images/live-chat.gif)
 
 Come back again later to find more potential soulmates 🤗
 
-login.gif
+![Login image](https://s8.gifyu.com/images/logine079d1dc3e9c8c2f.gif)
 
 
 
