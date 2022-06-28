@@ -18,7 +18,7 @@ Make sure you have the WAMP server up and running
 Follow [these](https://www.myonlineedu.com/blog/view/5/configure-sendmail-for-wamp-and-connect-with-gmail-in-development) steps to download and configure Fake Sendmail
 
 ### Step 3: 
-Clone this repo on your desktop and copy the folder in the following directory: `"C:\wamp64\www\"`
+Clone this repo in the following directory: `"C:\wamp64\www\"`
 
 ### Step 4: 
 Right click on the WAMP Server tray icon and under the tools section, note down the port used by MySQL and Apache server
