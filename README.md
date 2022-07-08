@@ -6,6 +6,10 @@ Signup for free and try your luck. You just might find the girl you've always be
 
 <br />
 
+# Preview
+
+![Homepage image](https://s8.gifyu.com/images/homepage.gif)
+
 ## Installation
 ### Step 1: 
 Follow this [link](https://www.c-sharpcorner.com/article/how-to-install-wamp-server-in-windows-10/) to download and setup WAMP server on your system
